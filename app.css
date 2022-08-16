@@ -9,14 +9,16 @@
 
 :root {
     --clr-main: #83869A;
-    --clr-main-bg: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(131,134,154,1) 200%);
+    --clr-main-bg: linear-gradient(180deg, rgba(255,255,255,1) 30%, rgba(102,108,163,1) 300%);
     --clr-heading: #13183F;
     --clr-btn: #FFFFFF;
-    --clr-button-1-hover: #666CA3;
+    --clr-btn-hover: #666CA3;
     --clr-link: #F74780;
     --clr-link-hover: #FFA7C3;
-    --clr-gradient-light: linear-gradient(135deg, rgba(240,42,166,1) 0%, rgba(255,111,72,1) 100%);
-    --clr-gradient-dark: linear-gradient(135deg, rgba(72,81,255,1) 0%, rgba(240,42,166,1) 100%);
+    --clr-gradient-light: linear-gradient(0deg, rgba(240,42,166,1) 0%, rgba(249,83,110,1) 50%, rgba(255,111,72,1) 100%);
+    --clr-gradient-dark: linear-gradient(180deg, rgba(72,81,255,1) 0%, rgba(171,58,202,1) 60%, rgba(240,42,166,1) 100%);
+    /* --clr-gradient-light: 
+    --clr-gradient-dark:  */
     --clr-course-bg: #FFFFFF;
     --fs-heading-xl: 56px;
     --fs-heading-l: 40px;
@@ -36,6 +38,7 @@
     --fw-body-s: 700;
 }
 
+/* || Generic Element Styles */
 body {
     font-size: var(--fs-body-s);
     font-family: var(--ff-main), sans-serif;
@@ -52,13 +55,14 @@ h1 {
 h2 {
     color: var(--clr-heading);
     font-size: var(--fs-heading-s);
+    margin: 1rem 0;
 
 }
 
 p {
     color: var(--clr-main);
-    font-size: var(--fs-body-m);
-    line-height: var(--lh-body-m);
+    font-size: var(--fs-body-s);
+    line-height: var(--lh-body-s);
     font-weight: var(--fw-body-m);
 }
 
@@ -69,6 +73,71 @@ header {
     margin: 1rem 1rem;
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-heading);
+    padding: 2rem 1rem;
+}
+
+/* || Main Content Styles */
+.main {
+    margin: 1rem;
+}
+
+.main__description {
+    margin-bottom: 1.5rem;
+}
+
+.main__hero {
+    margin-top: 1rem;
+}
+
+.main__hero img {
+    max-width: 100%;
+}
+
+.main__courses {
+    background: var(--clr-gradient-light);
+    color: var(--clr-btn);
+    font-size: var(--fs-heading-s);
+    font-weight: var(--fw-body-s);
+    border-radius: 1rem;
+    height: 7rem;
+    padding: 1.8rem;
+}
+
+/* || Course Styles */
+.course {
+    background-color: var(--clr-course-bg);
+    border-radius: 1rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    position: relative;
+    max-width: 350px;
+}
+
+.course__icon > svg {
+    position: absolute;
+    top: -30px;
+
+}
+
+.course > p {
+    margin: 1rem 0;
+}
+
+.course__link {
+    color: var(--clr-link);
+    text-decoration: none;
+}
+
+.course__link:hover {
+    color: var(--clr-link-hover);
+}
+
+/* || Button Styles */
 .btn {
     border-radius: 2rem;
     width: 8rem;
@@ -80,32 +149,23 @@ header {
     font-weight: var(--fw-body-m);
 }
 
-.main {
-    margin: 0.5rem;
-}
-
-.main__description {
-    margin-bottom: 1rem;
-}
-
-.main .btn {
+.btn--light-gradient {
     width: 10rem;
-    background: var(--clr-gradient-light);
+    background: var(--clr-gradient-light)
 }
 
-.main__hero img {
-    max-width: 100%;
+.btn--dark-gradient {
+    background: var(--clr-gradient-dark);
 }
 
-/* || Course Styles */
-.course {
-    background-color: var(--clr-course-bg);
-    border-radius: 1rem;
-    margin: 2rem 0;
-    padding: 2rem;
+.btn:hover {
+    background-color: var(--clr-btn-hover);
 }
 
-.course__link {
-    color: var(--clr-link);
-    text-decoration: none;
+.btn--light-gradient:hover {
+    background: ;
+}
+
+.btn--dark-gradient:hover {
+    background: ;
 }
