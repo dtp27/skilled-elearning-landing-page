@@ -1,1 +1,111 @@
 /* || General Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --clr-main: #83869A;
+    --clr-main-bg: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(131,134,154,1) 200%);
+    --clr-heading: #13183F;
+    --clr-btn: #FFFFFF;
+    --clr-button-1-hover: #666CA3;
+    --clr-link: #F74780;
+    --clr-link-hover: #FFA7C3;
+    --clr-gradient-light: linear-gradient(135deg, rgba(240,42,166,1) 0%, rgba(255,111,72,1) 100%);
+    --clr-gradient-dark: linear-gradient(135deg, rgba(72,81,255,1) 0%, rgba(240,42,166,1) 100%);
+    --clr-course-bg: #FFFFFF;
+    --fs-heading-xl: 56px;
+    --fs-heading-l: 40px;
+    --fs-heading-m: 32px;
+    --fs-heading-s: 24px;
+    --fs-body-m: 18px;
+    --fs-body-s: 16px;
+    --lh-heading-xl: 70px;
+    --lh-heading-l: 51px;
+    --lh-heading-m: 40px;
+    --lh-heading-s: 28px;
+    --lh-body-m: 28px;
+    --lh-body-s: 26px;
+    --ff-main: 'Plus Jakarta Sans';
+    --fw-heading: 800;
+    --fw-body-m: 500;
+    --fw-body-s: 700;
+}
+
+body {
+    font-size: var(--fs-body-s);
+    font-family: var(--ff-main), sans-serif;
+    background: var(--clr-main-bg);
+}
+
+h1 {
+    color: var(--clr-heading);
+    font-size: var(--fs-heading-l);
+    line-height: var(--lh-heading-l);
+    margin: 2rem 0;
+}
+
+h2 {
+    color: var(--clr-heading);
+    font-size: var(--fs-heading-s);
+
+}
+
+p {
+    color: var(--clr-main);
+    font-size: var(--fs-body-m);
+    line-height: var(--lh-body-m);
+    font-weight: var(--fw-body-m);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+
+.btn {
+    border-radius: 2rem;
+    width: 8rem;
+    height: 3rem;
+    color: var(--clr-btn);
+    background-color: var(--clr-heading);
+    border: none;
+    font-size: var(--fs-body-s);
+    font-weight: var(--fw-body-m);
+}
+
+.main {
+    margin: 0.5rem;
+}
+
+.main__description {
+    margin-bottom: 1rem;
+}
+
+.main .btn {
+    width: 10rem;
+    background: var(--clr-gradient-light);
+}
+
+.main__hero img {
+    max-width: 100%;
+}
+
+/* || Course Styles */
+.course {
+    background-color: var(--clr-course-bg);
+    border-radius: 1rem;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.course__link {
+    color: var(--clr-link);
+    text-decoration: none;
+}
