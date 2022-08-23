@@ -9,14 +9,14 @@
 
 :root {
     --clr-main: #83869A;
-    --clr-main-bg: linear-gradient(180deg, rgba(255,255,255,1) 30%, rgba(102,108,163,1) 300%);
+    --clr-main-bg: linear-gradient(180deg, rgba(255, 255, 255, 1) 30%, rgba(102, 108, 163, 1) 300%);
     --clr-heading: #13183F;
     --clr-btn: #FFFFFF;
     --clr-btn-hover: #666CA3;
     --clr-link: #F74780;
     --clr-link-hover: #FFA7C3;
-    --clr-gradient-light: linear-gradient(0deg, rgba(240,42,166,1) 0%, rgba(249,83,110,1) 50%, rgba(255,111,72,1) 100%);
-    --clr-gradient-dark: linear-gradient(180deg, rgba(72,81,255,1) 0%, rgba(171,58,202,1) 60%, rgba(240,42,166,1) 100%);
+    --clr-gradient-light: linear-gradient(0deg, rgba(240, 42, 166, 1) 0%, rgba(249, 83, 110, 1) 50%, rgba(255, 111, 72, 1) 100%);
+    --clr-gradient-dark: linear-gradient(180deg, rgba(72, 81, 255, 1) 0%, rgba(171, 58, 202, 1) 60%, rgba(240, 42, 166, 1) 100%);
     /* --clr-gradient-light: 
     --clr-gradient-dark:  */
     --clr-course-bg: #FFFFFF;
@@ -43,6 +43,15 @@ body {
     font-size: var(--fs-body-s);
     font-family: var(--ff-main), sans-serif;
     background: var(--clr-main-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 375px;
+    /* margin: 0 5%; */
 }
 
 h1 {
@@ -70,20 +79,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 1rem;
+    margin: 1rem 5%;
 }
+
+
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--clr-heading);
-    padding: 2rem 1rem;
+    padding: 2rem 5%;
+    width: 100%;
 }
 
 /* || Main Content Styles */
 .main {
-    margin: 1rem;
+    margin: 1rem 5%;
 }
 
 .main__description {
@@ -91,11 +103,11 @@ footer {
 }
 
 .main__hero {
+    min-height: 300px;
     margin-top: 1rem;
-}
-
-.main__hero img {
-    max-width: 100%;
+    margin-bottom: -2rem;
+    background-image: url("assets/image-hero-mobile.png");
+    background-size: cover;
 }
 
 .main__courses {
@@ -118,13 +130,13 @@ footer {
     max-width: 350px;
 }
 
-.course__icon > svg {
+.course__icon>svg {
     position: absolute;
     top: -30px;
 
 }
 
-.course > p {
+.course>p {
     margin: 1rem 0;
 }
 
@@ -151,7 +163,7 @@ footer {
 
 .btn--light-gradient {
     width: 10rem;
-    background: var(--clr-gradient-light)
+    background: var(--clr-gradient-light);
 }
 
 .btn--dark-gradient {
@@ -162,3 +174,81 @@ footer {
     background-color: var(--clr-btn-hover);
 }
 
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: var(--fs-heading-xl);
+        line-height: var(--lh-heading-xl);
+    }
+    
+    h2 {
+        font-size: var(--fs-heading-m);
+    
+    }
+    
+    p {
+        font-size: var(--fs-body-m);
+        line-height: var(--lh-body-m);
+        font-weight: var(--fw-body-l);
+    }
+
+    .main {
+        display: grid;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .main__heading {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        margin-bottom: 5rem;
+    }
+
+    .main__hero {
+        background-image: url("assets/image-hero-tablet.png");
+        background-size: 180%;
+        background-repeat: no-repeat;
+        background-position: bottom 0% left 10%;
+    }
+
+    .courses {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .courses > * {
+       height: inherit;
+       margin: 0;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    .main {
+        grid-template-rows: 0.8fr 1fr;
+    }
+
+    .main__heading-text {
+        padding: 20% 20% 20% 0;
+    }
+
+    .main__hero {
+        background-image: url("assets/image-hero-desktop.png");
+        /* background-size: 100%; */
+        background-repeat: no-repeat;
+    }
+
+
+    .courses {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
