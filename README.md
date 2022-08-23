@@ -22,7 +22,7 @@ This is my attempt at re-creating the skilled elearning landing page, as part of
 
 ### Solution
 
-- GitHub Repo: [Add solution URL here](https://github.com/dtp27/skilled-elearning-landing-page)
+- GitHub Repo: [Add solution URL here](https://github.com/dtp27/skilled-elearning-landing-page/)
 - Live Site: [Add live site URL here](https://dtp27.github.io/skilled-elearning-landing-page/)
 
 ## My process

@@ -20,18 +20,18 @@
     /* --clr-gradient-light: 
     --clr-gradient-dark:  */
     --clr-course-bg: #FFFFFF;
-    --fs-heading-xl: 56px;
-    --fs-heading-l: 40px;
-    --fs-heading-m: 32px;
-    --fs-heading-s: 24px;
-    --fs-body-m: 18px;
-    --fs-body-s: 16px;
-    --lh-heading-xl: 70px;
-    --lh-heading-l: 51px;
-    --lh-heading-m: 40px;
-    --lh-heading-s: 28px;
-    --lh-body-m: 28px;
-    --lh-body-s: 26px;
+    --fs-heading-xl: 3.5rem;
+    --fs-heading-l: 2.5rem;
+    --fs-heading-m: 2rem;
+    --fs-heading-s: 1.5rem;
+    --fs-body-m: 1.125rem;
+    --fs-body-s: 1rem;
+    --lh-heading-xl: 4.375rem;
+    --lh-heading-l: 3.1875rem;
+    --lh-heading-m: 2.5rem;
+    --lh-heading-s: 1.75rem;
+    --lh-body-m: 1.75rem;
+    --lh-body-s: 1.625rem;
     --ff-main: 'Plus Jakarta Sans';
     --fw-heading: 800;
     --fw-body-m: 500;
@@ -40,13 +40,14 @@
 
 /* || Generic Element Styles */
 body {
-    font-size: var(--fs-body-s);
+    font-size: 16px;
     font-family: var(--ff-main), sans-serif;
     background: var(--clr-main-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .container {
@@ -110,7 +111,7 @@ footer {
     background-size: cover;
 }
 
-.main__courses {
+.courses__text {
     background: var(--clr-gradient-light);
     color: var(--clr-btn);
     font-size: var(--fs-heading-s);
@@ -225,6 +226,14 @@ footer {
        margin: 0;
     }
 
+    .courses__text {
+        padding-top: 20%;
+    }
+
+    .course {
+        max-height: 18rem;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -245,10 +254,20 @@ footer {
         /* background-size: 100%; */
         background-repeat: no-repeat;
     }
-
-
+    
     .courses {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+    .courses__text {
+        padding-top: 20%;
+        font-size: var(--fs-heading-m);
+        font-weight: var(--fw-body-l);
+        line-height: var(--lh-heading-m);
+    }
+
+    .course {
+        max-height: 20rem;
     }
 }
